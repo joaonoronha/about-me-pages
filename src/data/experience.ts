@@ -209,20 +209,44 @@ export const experience: ExperienceItem[] = [
       "Led frontend development across enterprise applications at Hugo Boss's Lisbon Nearshore hub, owning multiple products and building vendor integration platforms.",
     projects: [
       {
-        name: "Vendor Integration Platform",
-        icon: "🔌",
+        name: "Profit Calculation Platform",
+        icon: "📊",
         description:
-          "Built a platform to integrate external vendors with Hugo Boss's enterprise systems.",
-        technologies: ["Angular", "ASP.NET Core", "TypeScript"],
-        impact: "Streamlined vendor onboarding across the enterprise.",
+          "A legacy ASP.NET application used by Hugo Boss to calculate the profitability of individual clothing items.",
+        challenges:
+          "The profit calculation platform was a legacy ASP.NET application used by Hugo Boss to calculate the profitability of individual clothing items. The application had become difficult to maintain and evolve.",
+        solution:
+          "Refactored the application, modernizing large parts of the codebase while preserving business-critical functionality. Improved maintainability and supported the continued evolution of the platform.",
+        impactPoints: [
+          "Improved maintainability of a business-critical application",
+          "Reduced technical debt in a legacy codebase",
+          "Enabled continued development without disrupting business operations",
+        ],
+        technologies: ["ASP.NET", "C#", "jQuery", "Kendo UI"],
+      },
+      {
+        name: "Digital Showroom",
+        icon: "👔",
+        description:
+          "Enabled internal teams and partners to browse and manage clothing collections digitally.",
+        challenges:
+          "Hugo Boss's Digital Showroom enabled internal teams and partners to browse and manage clothing collections digitally, requiring continuous feature development and maintenance.",
+        solution:
+          "Contributed to the ongoing development and maintenance of the platform, implementing new features, resolving issues, and collaborating with cross-functional teams to support evolving business requirements.",
+        impactPoints: [
+          "Delivered new functionality for a production enterprise application",
+          "Maintained a reliable platform supporting business users",
+          "Collaborated across engineering teams to ensure stable releases",
+        ],
+        technologies: ["Angular", "Node.js", "TypeScript"],
       },
     ],
     leadership: {
       crossFunctional: "Worked across enterprise teams and vendors",
     },
     stack: {
-      frontend: ["Angular", "TypeScript"],
-      backend: ["ASP.NET Core", "C#"],
+      frontend: ["Angular", "TypeScript", "jQuery", "Kendo UI"],
+      backend: ["ASP.NET", "C#", "Node.js"],
     },
     achievements: ["Owned multiple enterprise products end-to-end"],
   },
