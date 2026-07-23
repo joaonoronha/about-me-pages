@@ -62,7 +62,7 @@ export const experience: ExperienceItem[] = [
           "Designed the ProseMirror-based editor and LLM-powered linter",
           "Partnered with Product and Design on the authoring model",
         ],
-        technologies: ["React", "TypeScript", "ProseMirror", "MCP", "Claude"],
+        technologies: ["Vue 3", "TypeScript", "ProseMirror", "MCP", "Claude"],
         impact:
           "Unlocked agent creation for non-technical teams across a customer base of 70,000+ organisations.",
       },
@@ -75,7 +75,7 @@ export const experience: ExperienceItem[] = [
           "Shaped the technical approach with Product and ML",
           "Owned the frontend architecture and delivery",
         ],
-        technologies: ["React", "TypeScript", "LLM pipelines"],
+        technologies: ["Vue 3", "TypeScript", "LLM pipelines"],
         impact:
           "Reduced the cold-start problem for new agent deployments by surfacing high-signal skills automatically.",
       },
@@ -88,7 +88,7 @@ export const experience: ExperienceItem[] = [
           "Defined patterns, primitives and the Dialtone integration",
           "Onboarded engineers across squads",
         ],
-        technologies: ["React", "TypeScript", "Dialtone", "Vite"],
+        technologies: ["Vue 3", "TypeScript", "Dialtone", "Vite"],
         impact:
           "Standardised how agentic surfaces are built across the org, cutting time to first feature for new squads.",
       },
