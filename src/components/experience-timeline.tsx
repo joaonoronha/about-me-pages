@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { experience, type ExperienceItem, type TechStack } from "@/data/experience";
@@ -55,6 +55,25 @@ function TimelineItem({
   expanded: boolean;
   onToggle: () => void;
 }) {
+  const headerRef = useRef<HTMLButtonElement>(null);
+  const isInitial = useRef(true);
+
+  useEffect(() => {
+    if (isInitial.current) {
+      isInitial.current = false;
+      return;
+    }
+    if (expanded) {
+      const header = headerRef.current;
+      if (!header) return;
+      const rect = header.getBoundingClientRect();
+      const isFullyVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+      if (!isFullyVisible) {
+        header.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [expanded]);
+
   return (
     <li className="pl-8 pb-10 relative group">
       <span
@@ -64,6 +83,7 @@ function TimelineItem({
         )}
       />
       <button
+        ref={headerRef}
         type="button"
         onClick={onToggle}
         aria-expanded={expanded}
