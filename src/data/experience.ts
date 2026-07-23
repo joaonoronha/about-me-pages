@@ -257,15 +257,16 @@ export const experience: ExperienceItem[] = [
         name: "Internal Automation Platform",
         icon: "🔧",
         description:
-          "Internal web applications and automation tools to streamline operational processes across the EMEA Backup & Storage team.",
+          "Developed automation scripts and internal tooling to streamline operational processes across the EMEA Backup & Storage organisation.",
         challenges:
-          "The EMEA Backup & Storage team relied on repetitive manual operational tasks and lacked centralized tooling for internal workflows.",
+          "The EMEA Backup & Storage team relied on repetitive manual operational tasks that were time-consuming, error-prone, and difficult to scale.",
         solution:
-          "Built internal web applications and automation tools to streamline operational processes, improve visibility, and reduce repetitive work across the team.",
+          "Developed Python and shell automation scripts to eliminate repetitive operational tasks, standardize common workflows, and improve the reliability of day-to-day infrastructure operations.",
         impactPoints: [
-          "Reduced manual effort across the EMEA Backup & Storage organisation",
-          "Improved day-to-day operational efficiency",
-          "Established reusable internal tooling adopted across the team",
+          "Reduced manual operational effort across the EMEA Backup & Storage organisation",
+          "Improved consistency and reliability of operational workflows",
+          "Increased team productivity by automating repetitive infrastructure tasks",
+          "Created reusable automation scripts adopted across the team",
         ],
       },
     ],
