@@ -55,7 +55,7 @@ function TimelineItem({
   expanded: boolean;
   onToggle: () => void;
 }) {
-  const headerRef = useRef<HTMLButtonElement>(null);
+  const headingRef = useRef<HTMLHeadingElement>(null);
   const isInitial = useRef(true);
 
   useEffect(() => {
@@ -65,12 +65,12 @@ function TimelineItem({
     }
     if (expanded) {
       const timer = setTimeout(() => {
-        const header = headerRef.current;
-        if (!header) return;
-        const rect = header.getBoundingClientRect();
+        const heading = headingRef.current;
+        if (!heading) return;
+        const rect = heading.getBoundingClientRect();
         const isFullyVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
         if (!isFullyVisible) {
-          header.scrollIntoView({ behavior: "smooth", block: "start" });
+          heading.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       }, 300);
       return () => clearTimeout(timer);
@@ -86,7 +86,6 @@ function TimelineItem({
         )}
       />
       <button
-        ref={headerRef}
         type="button"
         onClick={onToggle}
         aria-expanded={expanded}
@@ -94,7 +93,7 @@ function TimelineItem({
         className="w-full text-left cursor-pointer"
       >
         <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-          <h3 className="font-serif text-2xl md:text-3xl">{item.role}</h3>
+          <h3 ref={headingRef} className="font-serif text-2xl md:text-3xl">{item.role}</h3>
           <span className="text-primary font-medium">· {item.company}</span>
           <span className="text-sm text-muted-foreground sm:ml-auto">{item.period}</span>
         </div>
