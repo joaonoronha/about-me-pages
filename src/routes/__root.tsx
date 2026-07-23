@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "João Noronha — Engineering Manager & AI Product Leader" },
+      { name: "description", content: "Engineering Manager at Dialpad with 10+ years building SaaS, AI platforms and developer tooling. Based in Lisbon." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "João Noronha — Engineering Manager & AI Product Leader" },
+      { property: "og:description", content: "Engineering Manager at Dialpad with 10+ years building SaaS, AI platforms and developer tooling. Based in Lisbon." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "João Noronha — Engineering Manager & AI Product Leader" },
+      { name: "twitter:description", content: "Engineering Manager at Dialpad with 10+ years building SaaS, AI platforms and developer tooling. Based in Lisbon." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/06a6b100-0f41-4622-ba57-16cccdcc74fd/id-preview-fc948e1b--892c68e2-4f37-4128-85e8-f14f7e205135.lovable.app-1784804578920.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/06a6b100-0f41-4622-ba57-16cccdcc74fd/id-preview-fc948e1b--892c68e2-4f37-4128-85e8-f14f7e205135.lovable.app-1784804578920.png" },
     ],
     links: [
       {

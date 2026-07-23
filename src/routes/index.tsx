@@ -14,7 +14,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Engineering Manager at Dialpad. Building AI-powered products, agentic platforms and the teams behind them.",
+          "Engineering Manager at Dialpad with 10+ years building SaaS, AI platforms and developer tooling. Based in Lisbon.",
       },
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary_large_image" },
