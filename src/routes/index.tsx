@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import portraitAsset from "@/assets/joao-portrait.jpeg.asset.json";
+import { ExperienceTimeline } from "@/components/experience-timeline";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,38 +31,6 @@ const highlights = [
   { k: "6", v: "Direct reports" },
 ];
 
-const experience = [
-  {
-    company: "Dialpad",
-    role: "Engineering Manager",
-    period: "Oct 2024 — Present",
-    body: "Lead a team of six engineers delivering strategic Agentic AI initiatives while remaining hands-on in architecture and implementation. Own bi-weekly beta and production releases; DRI for QA ↔ Engineering. Led the Agentic Skill Builder — letting non-technical users create AI agents through prompts, guardrails and MCP actions — and designed a ProseMirror editor with an LLM-powered linter.",
-  },
-  {
-    company: "Dialpad",
-    role: "Senior Software Engineer",
-    period: "May 2023 — Oct 2024",
-    body: "Led technical initiatives integrating Kare's acquired AI products into Dialpad. Rebuilt customer chat and knowledge management applications, migrated legacy JavaScript to TypeScript, and partnered closely with Product and Design on scalable AI-powered experiences.",
-  },
-  {
-    company: "Dialpad",
-    role: "Software Engineer",
-    period: "Jun 2021 — May 2023",
-    body: "Joined through the Kare acquisition and rebuilt AI chat products within the Dialpad ecosystem, contributing to customer-facing experiences used across a platform serving 70,000+ customers.",
-  },
-  {
-    company: "Hugo Boss — Lisbon Nearshore",
-    role: "Frontend Developer",
-    period: "2018 — 2021",
-    body: "Led frontend development across enterprise applications, owned multiple products, and built vendor integration platforms using Angular, ASP.NET Core and TypeScript.",
-  },
-  {
-    company: "AT&T",
-    role: "Backup, Storage & Automation Specialist",
-    period: "2017 — 2018",
-    body: "Developed automation tooling, internal web applications and operational platforms while serving as automation SME for the EMEA Backup & Storage organisation.",
-  },
-];
 
 const skills = [
   "TypeScript", "JavaScript", "React", "Redux", "Vue 2/3", "Node.js",
@@ -205,19 +174,7 @@ function Landing() {
           </div>
         </div>
 
-        <ol className="relative border-l border-border ml-2">
-          {experience.map((e, i) => (
-            <li key={i} className="pl-8 pb-14 relative group">
-              <span className="absolute -left-[7px] top-2 h-3 w-3 rounded-full bg-primary ring-4 ring-background transition group-hover:scale-125" />
-              <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-                <h3 className="font-serif text-2xl md:text-3xl">{e.role}</h3>
-                <span className="text-primary font-medium">· {e.company}</span>
-                <span className="text-sm text-muted-foreground ml-auto">{e.period}</span>
-              </div>
-              <p className="mt-3 text-muted-foreground text-pretty max-w-3xl">{e.body}</p>
-            </li>
-          ))}
-        </ol>
+        <ExperienceTimeline />
       </section>
 
       {/* Skills + Achievements */}
