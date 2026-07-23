@@ -187,7 +187,7 @@ export const experience: ExperienceItem[] = [
       },
     ],
     stack: {
-      frontend: ["Vue", "TypeScript", "JavaScript"],
+      frontend: ["Vue", "React 17", "Redux", "TypeScript", "JavaScript"],
       backend: ["Node.js"],
     },
     achievements: [
@@ -243,6 +243,7 @@ export const experience: ExperienceItem[] = [
       },
     ],
     stack: {
+      backend: ["Python", "Shell scripting"],
       devx: ["Automation scripting", "Internal web tooling"],
     },
     achievements: ["Automation SME for EMEA Backup & Storage"],
