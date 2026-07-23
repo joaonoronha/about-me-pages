@@ -111,7 +111,7 @@ function Landing() {
             <figure className="relative">
               <div className="absolute -inset-2 bg-primary/10 rounded-sm rotate-2" />
               <img
-                src="/joao-portrait.jpeg"
+                src={`${import.meta.env.BASE_URL}joao-portrait.jpeg`}
                 alt="Portrait of João Noronha"
                 className="relative w-full h-[420px] md:h-[520px] object-cover grayscale rounded-sm shadow-2xl"
               />
