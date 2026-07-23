@@ -139,25 +139,37 @@ function Landing() {
           <div className="md:col-span-4">
             <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">01 — About</div>
             <h2 className="font-serif text-4xl md:text-5xl leading-tight">
-              Product-minded, still writes the code.
+              Engineering Manager at Dialpad.
             </h2>
           </div>
           <div className="md:col-span-8 space-y-6 text-lg text-muted-foreground text-pretty">
             <p>
-              I progressed from Software Engineer to Engineering Manager at Dialpad
-              through consistent technical leadership, product delivery and
-              cross-functional collaboration — while the org scaled from ~25 to 150+
+              I'm an Engineering Manager at Dialpad, where I've grown from Software
+              Engineer to management while helping scale our team from ~25 to 150+
               engineers.
             </p>
             <p>
-              Today I lead engineering for our Agentic AI platform: designing the
-              frontend architecture 50+ engineers now build on, shipping the Skill
-              Builder and Skill Mining, and running the release cadence that keeps 70,000+
-              customers unblocked.
+              Currently, I lead a core team inside our Agentic AI division, driving
+              technical execution across critical initiatives:
             </p>
+            <ul className="space-y-4">
+              <li>
+                <span className="font-semibold text-foreground whitespace-nowrap">Platform Architecture</span>
+                <span className="ml-2">Designed the frontend architecture that 50+ engineers actively build on today.</span>
+              </li>
+              <li>
+                <span className="font-semibold text-foreground whitespace-nowrap">Flagship AI Products</span>
+                <span className="ml-2">Led the design and rollout of key features like Skill Builder and Skill Mining.</span>
+              </li>
+              <li>
+                <span className="font-semibold text-foreground whitespace-nowrap">Operational Excellence</span>
+                <span className="ml-2">Manage the release cadence that keeps 70,000+ global customers moving forward without disruption.</span>
+              </li>
+            </ul>
             <p>
-              I care about specification-driven engineering, LLM-assisted delivery
-              (Claude in the loop), and building small teams that ship real things.
+              I thrive at the intersection of specification-driven engineering,
+              LLM-assisted delivery (Claude in the loop), and empowering small, agile
+              teams to ship real, impactful software.
             </p>
           </div>
         </div>
