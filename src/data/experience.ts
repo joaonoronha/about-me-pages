@@ -2,10 +2,12 @@ export type Project = {
   name: string;
   icon?: string;
   description: string;
+  challenges?: string;
+  solution?: string;
   responsibilities?: string[];
   technologies?: string[];
   impact?: string;
-  challenges?: string;
+  impactPoints?: string[];
 };
 
 export type TechStack = {
@@ -232,20 +234,50 @@ export const experience: ExperienceItem[] = [
     short:
       "Developed automation tooling and internal web applications while serving as EMEA automation SME.",
     overview:
-      "Developed automation tooling, internal web applications and operational platforms while serving as automation SME for the EMEA Backup & Storage organisation.",
+      "Worked as the Automation Subject Matter Expert for the EMEA Backup & Storage organisation, building internal automation platforms, developer tooling, and operational systems that significantly reduced manual work across enterprise infrastructure.",
     projects: [
       {
-        name: "Automation Tooling",
+        name: "Enterprise Backup Upgrade Automation",
         icon: "⚙️",
         description:
-          "Built internal automation and web tooling for the EMEA Backup & Storage organisation.",
-        impact: "Reduced manual operational work across the EMEA team.",
+          "Automated backup software upgrades across a fleet of 10,000+ Linux servers.",
+        challenges:
+          "Upgrading enterprise backup software across more than 10,000 Linux servers was a repetitive, manual, and high-risk operational process that required significant engineering effort and coordination.",
+        solution:
+          "Designed and developed a Python-based automation platform that orchestrated backup software upgrades across the fleet. The system automated deployment logic, validation, execution, and reporting, transforming a manual infrastructure operation into a repeatable and reliable workflow.",
+        impactPoints: [
+          "Successfully automated upgrades across 10,000+ Linux servers",
+          "Eliminated large amounts of manual operational work",
+          "Reduced deployment risk through consistent automation",
+          "Increased deployment reliability and repeatability",
+          "Enabled the operations team to execute upgrades significantly faster",
+        ],
+      },
+      {
+        name: "Internal Automation Platform",
+        icon: "🔧",
+        description:
+          "Internal web applications and automation tools to streamline operational processes across the EMEA Backup & Storage team.",
+        challenges:
+          "The EMEA Backup & Storage team relied on repetitive manual operational tasks and lacked centralized tooling for internal workflows.",
+        solution:
+          "Built internal web applications and automation tools to streamline operational processes, improve visibility, and reduce repetitive work across the team.",
+        impactPoints: [
+          "Reduced manual effort across the EMEA Backup & Storage organisation",
+          "Improved day-to-day operational efficiency",
+          "Established reusable internal tooling adopted across the team",
+        ],
       },
     ],
     stack: {
-      backend: ["Python", "Shell scripting"],
-      devx: ["Automation scripting", "Internal web tooling"],
+      backend: ["Python", "Shell Scripting"],
+      infrastructure: ["Linux", "Enterprise Backup Systems"],
+      devx: ["Internal Tooling", "Process Automation", "Operational Platforms"],
     },
-    achievements: ["Automation SME for EMEA Backup & Storage"],
+    achievements: [
+      "Automation Subject Matter Expert for the EMEA Backup & Storage organisation",
+      "Designed and delivered an automation platform used to upgrade 10,000+ Linux servers",
+      "Built internal tooling that significantly reduced operational overhead",
+    ],
   },
 ];

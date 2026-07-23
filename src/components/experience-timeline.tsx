@@ -161,38 +161,63 @@ function ExpandedPanel({ item }: { item: ExperienceItem }) {
                 <p className="mt-2 text-muted-foreground text-pretty">{p.description}</p>
 
                 {p.challenges && (
-                  <div className="mt-4">
-                    <div className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-1">
-                      The challenge
+                    <div className="mt-4">
+                      <div className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-1">
+                        The challenge
+                      </div>
+                      <p className="text-sm text-foreground/90 text-pretty">{p.challenges}</p>
                     </div>
-                    <p className="text-sm text-foreground/90 text-pretty">{p.challenges}</p>
-                  </div>
-                )}
+                  )}
 
-                {p.responsibilities && p.responsibilities.length > 0 && (
-                  <div className="mt-4">
-                    <div className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-1">
-                      My role
+                  {p.solution && (
+                    <div className="mt-4">
+                      <div className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-1">
+                        My solution
+                      </div>
+                      <p className="text-sm text-foreground/90 text-pretty">{p.solution}</p>
                     </div>
-                    <ul className="space-y-1 text-sm text-foreground/90">
-                      {p.responsibilities.map((r) => (
-                        <li key={r} className="flex gap-2">
-                          <span className="text-primary">·</span>
-                          <span className="text-pretty">{r}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
+                  )}
 
-                {p.impact && (
-                  <div className="mt-4">
-                    <div className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-1">
-                      Impact
+                  {p.responsibilities && p.responsibilities.length > 0 && (
+                    <div className="mt-4">
+                      <div className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-1">
+                        My role
+                      </div>
+                      <ul className="space-y-1 text-sm text-foreground/90">
+                        {p.responsibilities.map((r) => (
+                          <li key={r} className="flex gap-2">
+                            <span className="text-primary">·</span>
+                            <span className="text-pretty">{r}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <p className="text-sm text-foreground/90 text-pretty">{p.impact}</p>
-                  </div>
-                )}
+                  )}
+
+                  {p.impact && (
+                    <div className="mt-4">
+                      <div className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-1">
+                        Impact
+                      </div>
+                      <p className="text-sm text-foreground/90 text-pretty">{p.impact}</p>
+                    </div>
+                  )}
+
+                  {p.impactPoints && p.impactPoints.length > 0 && (
+                    <div className="mt-4">
+                      <div className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-1">
+                        Impact
+                      </div>
+                      <ul className="space-y-1 text-sm text-foreground/90">
+                        {p.impactPoints.map((ip) => (
+                          <li key={ip} className="flex gap-2">
+                            <span className="text-primary">·</span>
+                            <span className="text-pretty">{ip}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
 
                 {p.technologies && p.technologies.length > 0 && (
                   <ul className="mt-4 flex flex-wrap gap-1.5">
