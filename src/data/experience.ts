@@ -158,7 +158,7 @@ export const experience: ExperienceItem[] = [
       crossFunctional: "Close partnership with Product and Design",
     },
     stack: {
-      frontend: ["Vue 2/3", "TypeScript", "JavaScript"],
+      frontend: ["Vue 2/3", "React 17", "Redux", "TypeScript", "JavaScript"],
       backend: ["Node.js"],
       infrastructure: ["Docker"],
     },
