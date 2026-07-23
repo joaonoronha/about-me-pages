@@ -134,7 +134,7 @@ export const experience: ExperienceItem[] = [
           "Led the frontend architecture",
           "Partnered with Product and Design on the new UX",
         ],
-        technologies: ["Vue 3", "TypeScript", "Node.js"],
+        technologies: ["Vue 3", "React 17", "Redux", "TypeScript", "Node.js"],
         impact: "Delivered a scalable foundation for AI chat experiences.",
       },
       {
