@@ -64,13 +64,16 @@ function TimelineItem({
       return;
     }
     if (expanded) {
-      const header = headerRef.current;
-      if (!header) return;
-      const rect = header.getBoundingClientRect();
-      const isFullyVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
-      if (!isFullyVisible) {
-        header.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
+      const timer = setTimeout(() => {
+        const header = headerRef.current;
+        if (!header) return;
+        const rect = header.getBoundingClientRect();
+        const isFullyVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+        if (!isFullyVisible) {
+          header.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 300);
+      return () => clearTimeout(timer);
     }
   }, [expanded]);
 
