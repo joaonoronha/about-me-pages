@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import portraitAsset from "@/assets/joao-portrait.jpeg.asset.json";
+
 import { ExperienceTimeline } from "@/components/experience-timeline";
 
 export const Route = createFileRoute("/")({
@@ -111,7 +111,7 @@ function Landing() {
             <figure className="relative">
               <div className="absolute -inset-2 bg-primary/10 rounded-sm rotate-2" />
               <img
-                src={portraitAsset.url}
+                src="/joao-portrait.jpeg"
                 alt="Portrait of João Noronha"
                 className="relative w-full h-[420px] md:h-[520px] object-cover grayscale rounded-sm shadow-2xl"
               />
