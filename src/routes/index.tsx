@@ -5,13 +5,13 @@ import { ExperienceTimeline } from "@/components/experience-timeline";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "João Noronha — Engineering Manager & AI Product Leader" },
+      { title: "João Noronha | Résumé" },
       {
         name: "description",
         content:
           "Engineering Manager at Dialpad with 10+ years building SaaS, AI platforms and developer tooling. Based in Lisbon.",
       },
-      { property: "og:title", content: "João Noronha — Engineering Manager & AI Product Leader" },
+      { property: "og:title", content: "João Noronha | Résumé" },
       {
         property: "og:description",
         content:
@@ -59,6 +59,7 @@ function Landing() {
             <a href="#work" className="hover:text-foreground transition">Work</a>
             <a href="#experience" className="hover:text-foreground transition">Experience</a>
             <a href="#skills" className="hover:text-foreground transition">Skills</a>
+            <a href="/how-i-build-with-ai" className="hover:text-foreground transition">How I build</a>
             <a href="#contact" className="hover:text-foreground transition">Contact</a>
           </nav>
           <a
@@ -95,7 +96,7 @@ function Landing() {
                 href="#experience"
                 className="px-5 py-3 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition"
               >
-                See the work →
+                See my journey →
               </a>
               <a
                 href="https://linkedin.com/in/joaonoronha36"

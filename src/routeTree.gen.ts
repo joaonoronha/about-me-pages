@@ -10,33 +10,43 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as HowIBuildWithAiRouteImport } from './routes/how-i-build-with-ai'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HowIBuildWithAiRoute = HowIBuildWithAiRouteImport.update({
+  id: '/how-i-build-with-ai',
+  path: '/how-i-build-with-ai',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/how-i-build-with-ai': typeof HowIBuildWithAiRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/how-i-build-with-ai': typeof HowIBuildWithAiRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/how-i-build-with-ai': typeof HowIBuildWithAiRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/how-i-build-with-ai'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/how-i-build-with-ai'
+  id: '__root__' | '/' | '/how-i-build-with-ai'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  HowIBuildWithAiRoute: typeof HowIBuildWithAiRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,12 +58,30 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/how-i-build-with-ai': {
+      id: '/how-i-build-with-ai'
+      path: '/how-i-build-with-ai'
+      fullPath: '/how-i-build-with-ai'
+      preLoaderRoute: typeof HowIBuildWithAiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  HowIBuildWithAiRoute: HowIBuildWithAiRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
