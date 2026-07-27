@@ -58,6 +58,7 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv11";
+    scroll-behavior: smooth;
   }
   .font-serif { font-family: var(--font-serif); }
 }

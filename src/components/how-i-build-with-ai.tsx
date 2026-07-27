@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import {
   Lightbulb,
   MessageSquare,
@@ -12,30 +11,7 @@ import {
   Wrench,
   SquareCheck,
   Sparkles,
-  ArrowLeft,
 } from "lucide-react";
-
-export const Route = createFileRoute("/how-i-build-with-ai")({
-  head: () => ({
-    meta: [
-      { title: "João Noronha | Résumé" },
-      {
-        name: "description",
-        content:
-          "How AI has evolved from a coding assistant into a core part of my engineering workflow — without replacing engineering judgment.",
-      },
-      { property: "og:title", content: "João Noronha | Résumé" },
-      {
-        property: "og:description",
-        content:
-          "How AI has evolved from a coding assistant into a core part of my engineering workflow.",
-      },
-      { property: "og:type", content: "article" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
-  component: HowIBuildWithAi,
-});
 
 const workflowSteps = [
   {
@@ -204,17 +180,13 @@ const principles = [
 
 function WorkflowStep({
   step,
-  index,
 }: {
   step: (typeof workflowSteps)[0];
-  index: number;
 }) {
   const Icon = step.icon;
   return (
     <li className="relative pl-16 pb-16 last:pb-0">
-      {/* Timeline line */}
       <span className="absolute left-[19px] top-4 bottom-0 w-px bg-border last:hidden" />
-      {/* Number */}
       <span className="absolute left-0 top-1 flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card text-xs font-medium text-muted-foreground">
         {step.num}
       </span>
@@ -246,32 +218,26 @@ function WorkflowStep({
   );
 }
 
-export function HowIBuildWithAi() {
+export function HowIBuildWithAi({ onBack }: { onBack: () => void }) {
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-primary/20">
-      {/* Nav */}
       <header className="sticky top-0 z-30 backdrop-blur-md bg-background/70 border-b border-border/60">
         <div className="mx-auto max-w-6xl px-6 h-14 flex items-center justify-between">
-          <a href="/" className="font-serif text-xl tracking-tight">
-            João <span className="text-primary">N.</span>
-          </a>
-          <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-            <a href="/" className="hover:text-foreground transition">Home</a>
-            <a href="/how-i-build-with-ai" className="text-foreground font-medium">
-              How I build
-            </a>
-          </nav>
-          <a
-            href="/"
-            className="text-sm px-4 py-2 rounded-full border border-border text-sm font-medium hover:border-foreground transition inline-flex items-center gap-2"
+          <button
+            onClick={onBack}
+            className="font-serif text-xl tracking-tight hover:opacity-80 transition"
           >
-            <ArrowLeft className="h-3.5 w-3.5" />
-            Back
-          </a>
+            João <span className="text-primary">N.</span>
+          </button>
+          <button
+            onClick={onBack}
+            className="text-sm px-4 py-2 rounded-full border border-border font-medium hover:border-foreground transition"
+          >
+            ← Back to résumé
+          </button>
         </div>
       </header>
 
-      {/* Hero */}
       <section className="mx-auto max-w-6xl px-6 pt-16 pb-20 md:pt-24 md:pb-28">
         <div className="max-w-3xl">
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-muted-foreground mb-8">
@@ -306,7 +272,6 @@ export function HowIBuildWithAi() {
         </div>
       </section>
 
-      {/* Section 1 — Building Features */}
       <section className="border-t border-border bg-card/50">
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
           <div className="grid md:grid-cols-12 gap-10 mb-16">
@@ -327,16 +292,13 @@ export function HowIBuildWithAi() {
             </div>
           </div>
           <ol>
-            {workflowSteps.map((step, i) => (
-              
-                <WorkflowStep step={step} index={i} />
-              
+            {workflowSteps.map((step) => (
+              <WorkflowStep key={step.num} step={step} />
             ))}
           </ol>
         </div>
       </section>
 
-      {/* Section 2 — Debugging */}
       <section className="border-t border-border">
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
           <div className="grid md:grid-cols-12 gap-10 mb-16">
@@ -379,7 +341,6 @@ export function HowIBuildWithAi() {
         </div>
       </section>
 
-      {/* Section 3 — Exploring Ideas */}
       <section className="border-t border-border bg-card/50">
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
           <div className="grid md:grid-cols-12 gap-10">
@@ -413,7 +374,6 @@ export function HowIBuildWithAi() {
         </div>
       </section>
 
-      {/* Section 4 — Principles */}
       <section className="border-t border-border">
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
           <div className="mb-16 max-w-2xl">
@@ -445,7 +405,6 @@ export function HowIBuildWithAi() {
         </div>
       </section>
 
-      {/* Closing */}
       <section className="border-t border-border bg-card/50">
         <div className="mx-auto max-w-6xl px-6 py-24 md:py-36">
           <div className="max-w-3xl">

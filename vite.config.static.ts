@@ -5,7 +5,7 @@ import tsConfigPaths from "vite-tsconfig-paths";
 import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 
 export default defineConfig({
-  base: "/about-me-pages/",
+  base: "",
   plugins: [
     TanStackRouterVite({
       target: "react",

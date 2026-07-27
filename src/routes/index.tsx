@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 
 import { ExperienceTimeline } from "@/components/experience-timeline";
+import { HowIBuildWithAi } from "@/components/how-i-build-with-ai";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -47,6 +49,14 @@ const achievements = [
 ];
 
 function Landing() {
+  const [showAiPage, setShowAiPage] = useState(false);
+
+  if (showAiPage) {
+    return <HowIBuildWithAi onBack={() => setShowAiPage(false)} />;
+  }
+
+  const onShowAiPage = () => setShowAiPage(true);
+
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-primary/20">
       {/* Nav */}
@@ -59,7 +69,7 @@ function Landing() {
             <a href="#work" className="hover:text-foreground transition">Work</a>
             <a href="#experience" className="hover:text-foreground transition">Experience</a>
             <a href="#skills" className="hover:text-foreground transition">Skills</a>
-            <a href="/how-i-build-with-ai" className="hover:text-foreground transition">How I build</a>
+            <a href="javascript:void(0);" onClick={onShowAiPage} className="hover:text-foreground transition">How I build</a>
             <a href="#contact" className="hover:text-foreground transition">Contact</a>
           </nav>
           <a
